@@ -1,4 +1,5 @@
 import numpy as np
+import random
 from basic.classifiers.linear_svm import *
 from basic.classifiers.softmax import *
 
@@ -26,4 +27,15 @@ class LinearClassifier:
         num_classes = np.max(y) + 1
         if self.W is None:
             #lazily initialize W
-            self.W = np.
+            self.W = np.random.randn(num_classes, dim) * 0.001
+        #run stochastic gradient desent to optimize W
+        loss_history = []
+        for it in xrange(num_iters):
+            x_batch = None
+            y_batch = None
+
+            idx = np.random.choice(num_train, batch_size, replace=True)
+            x_batch = x[:, idx]
+            y_batch = y[idx]
+
+
