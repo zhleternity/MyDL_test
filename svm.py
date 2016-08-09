@@ -9,7 +9,8 @@ from basic.datasets.data_util import load_CTFAR10
 from basic.classifiers.linear_svm import *
 import matplotlib.pyplot as plt
 from scipy import *
-from  basic.check_gradient import *
+from basic.check_gradient import *
+from basic.classifiers import LinearSVM
 
 
 #初始化
@@ -125,5 +126,6 @@ print 'vectorize:loss %e timeout %fs' % (loss_vectorize, toc - tic)
 print 'difference of two methods: %f ' % (loss_naive - loss_vectorize)
 
 #sgd
+svm = LinearSVM()
 
 
