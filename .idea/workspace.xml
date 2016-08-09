@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d196262c-9c1e-4876-a938-312be25c1c64" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svm.py" afterPath="$PROJECT_DIR$/svm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/classifiers/linear_classifier.py" afterPath="$PROJECT_DIR$/basic/classifiers/linear_classifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/classifiers/softmax.py" afterPath="$PROJECT_DIR$/basic/classifiers/softmax.py" />
     </list>
     <ignored path="dltest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linear_classifier.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="linear_classifier.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/basic/classifiers/linear_classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+            <state relative-caret-position="335">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="softmax.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="softmax.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/classifiers/softmax.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="88">
+              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -80,18 +81,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linear_svm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/classifiers/linear_svm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-              <folding>
-                <element signature="e#15#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/classifiers/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,6 +98,18 @@
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#15#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="linear_svm.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/classifiers/linear_svm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="68" selection-start-line="9" selection-start-column="4" selection-end-line="16" selection-end-column="68" />
+              <folding>
+                <element signature="e#15#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,14 +138,14 @@
         <option value="$PROJECT_DIR$/basic/classifiers/__init__.py" />
         <option value="$PROJECT_DIR$/basic/check_gradient.py" />
         <option value="$PROJECT_DIR$/svm.py" />
-        <option value="$PROJECT_DIR$/basic/classifiers/linear_classifier.py" />
         <option value="$PROJECT_DIR$/basic/classifiers/softmax.py" />
+        <option value="$PROJECT_DIR$/basic/classifiers/linear_classifier.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="457" />
-    <option name="y" value="513" />
+    <option name="x" value="570" />
+    <option name="y" value="535" />
     <option name="width" value="1400" />
     <option name="height" value="775" />
   </component>
@@ -494,7 +495,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="457" y="513" width="1400" height="775" extended-state="0" />
+    <frame x="570" y="535" width="1400" height="775" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17766498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -555,16 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/classifiers/linear_svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-          <folding>
-            <element signature="e#15#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/classifiers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -601,20 +592,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/classifiers/linear_classifier.py">
+    <entry file="file://$PROJECT_DIR$/basic/classifiers/linear_svm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        <state relative-caret-position="304">
+          <caret line="16" column="68" selection-start-line="9" selection-start-column="4" selection-end-line="16" selection-end-column="68" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#15#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/classifiers/softmax.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="88">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/classifiers/linear_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
