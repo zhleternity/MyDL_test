@@ -23,4 +23,7 @@ class LinearClassifier:
         a list containing the value of the loss function at each training iteration
         """
         dim, num_train = x.shape
-        
+        num_classes = np.max(y) + 1
+        if self.W is None:
+            #lazily initialize W
+            self.W = np.
