@@ -9,6 +9,7 @@ from basic.datasets.data_util import load_CTFAR10
 from basic.classifiers.linear_svm import svm_loss_naive
 import matplotlib.pyplot as plt
 from scipy import *
+from  basic.check_gradient import gradient_check_sparse
 
 
 #初始化
@@ -103,5 +104,10 @@ loss, gradient = svm_loss_naive(W, x_train, y_train, 0.00001)
 print 'loss: %f' % (loss, )
 
 
-loss
+loss, gradient = svm_loss_naive(W, x_train, y_train, 0.0)
+#gradient check :check out weather the numerical gradient and analytic gradient is identical,because the latter is fast,
+# but eary to error
+f = lambda w:svm_loss_naive(w, x_train, y_train,0.0)[0]
+grad_numerical = gradient_check_sparse(f, W, gradient, 10)
+
 
