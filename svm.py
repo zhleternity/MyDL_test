@@ -2,10 +2,11 @@
 #coding=utf-8
 #__author__ = 'eternity'
 
-import cv2
+import time
 import random
 import numpy as np
 from basic.datasets.data_util import load_CTFAR10
+from basic.classifiers.linear_svm import svm_loss_naive
 import matplotlib.pyplot as plt
 from scipy import *
 
@@ -81,6 +82,26 @@ mean_image = np.mean(x_train, axis=0)
 print mean_image[:10]
 plt.figure(figsize=(4, 4))
 plt.imshow(mean_image.reshape((32, 32, 3)).astype('uint8'))
+# time.sleep(1.0)
+x_train = x_train - mean_image
+x_val = x_val - mean_image
+x_test = x_test - mean_image
+
+#add the column of '1'
+x_train = np.hstack([x_train, np.ones((x_train.shape[0], 1))]).T
+x_val = np.hstack([x_val, np.ones((x_val.shape[0], 1))]).T
+x_test = np.hstack([x_test, np.ones((x_test.shape[0], 1))]).T
+print x_train.shape, x_val.shape, x_test.shape
+
+#svm
+#evaluate the efficiency of svm_loss_naive
+
+#produce the initial weights of svm
+W = np.random.randn(10, 3073) * 0.0001
+#compute the gradient and loss under the wieght W
+loss, gradient = svm_loss_naive(W, x_train, y_train, 0.00001)
+print 'loss: %f' % (loss, )
 
 
+loss
 
