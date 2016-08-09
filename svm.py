@@ -6,10 +6,10 @@ import time
 import random
 import numpy as np
 from basic.datasets.data_util import load_CTFAR10
-from basic.classifiers.linear_svm import svm_loss_naive
+from basic.classifiers.linear_svm import *
 import matplotlib.pyplot as plt
 from scipy import *
-from  basic.check_gradient import gradient_check_sparse
+from  basic.check_gradient import *
 
 
 #初始化
@@ -109,5 +109,21 @@ loss, gradient = svm_loss_naive(W, x_train, y_train, 0.0)
 # but eary to error
 f = lambda w:svm_loss_naive(w, x_train, y_train,0.0)[0]
 grad_numerical = gradient_check_sparse(f, W, gradient, 10)
+
+#two methods to cpmpute the loss of svm:generately,vectorize method is faster
+#naive loss of non-vectorize svm ,loss computing
+tic = time.time()
+loss_naive, grad_naive = svm_loss_naive(W, x_train, y_train, 0.00001)
+toc = time.time()
+print 'non-vectorize:loss %e timeout %fs' % (loss_naive, toc - tic)
+#vectorzie
+tic = time.time()
+loss_vectorize, _ = svm_loss_vectorized(W, x_train, y_train, 0.00001)
+toc = time.time()
+print 'vectorize:loss %e timeout %fs' % (loss_vectorize, toc - tic)
+#if your implementation is right ,the two value is same
+print 'difference of two methods: %f ' % (loss_naive - loss_vectorize)
+
+#sgd
 
 
