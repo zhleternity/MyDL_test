@@ -37,5 +37,39 @@ class LinearClassifier:
             idx = np.random.choice(num_train, batch_size, replace=True)
             x_batch = x[:, idx]
             y_batch = y[idx]
+            #evaluate loss and gradient
+            loss, grad = self.loss(x_batch, y_batch, regularization)
+            loss_history.append(loss)
+            self.W -= learning_rate * grad
+            if verbose and it % 100 == 0:
+                print 'iteration %d / %d: loss %f' % (it, num_iters, loss)
+            return loss_history
+
+    def predict(self, x):
+        """
+        predict the network by using the well-trained classifier
+        :param x:  D x N array of training data ,each training point is a D-dimensional column.
+        :return:
+        y_pred:predicted labels for the data in x.y_pred is a 1-dimensional array of length N,
+        and each element is an integer fiving the predicted class
+        """
+        y_pred = np.zeros(x.shape[1])
+        y_pred = np.argmax(self.W.dot(x), axis=0)
+        return y_pred
+
+    def loss(self, x_batch, y_batch, regularization):
+        pass
+
+
+class LinearSVM(LinearClassifier):
+    """A subclass that uses the multiclass SVM loss function"""
+    def loss(self, x_batch, y_batch, regularization):
+        return svm_loss_vectorized(self.W, x_batch, y_batch,regularization)
+
+
+class Softmax(LinearClassifier):
+    """A subclass that uses softmax + cross-entropy loss function"""
+    def loss(self, x_batch, y_batch, regularization):
+        return softmax_loss_vectorized(self.W, x_batch, y_batch, regularization)
 
 

@@ -30,20 +30,20 @@ print 'Test data shape: ', X_test.shape
 print 'Test labels shape: ', Y_test.shape
 
 #可视化一下图片集,每个类展示一些图片
-classes = ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog','horse', 'ship', 'truck']
-num_classes = len(classes)
-samples_per_class = 7
-for y, cls in enumerate(classes):
-    idxes = np.flatnonzero(Y_train == y)
-    idxes = np.random.choice(idxes, samples_per_class, replace=False)
-    for i, idx in enumerate(idxes):
-      plt_idx = i * num_classes + y + 1
-      plt.subplot(samples_per_class, num_classes, plt_idx)
-      plt.imshow(X_train[idx].astype('uint8'))
-      plt.axis('off')
-      if i == 0:
-          plt.title(cls)
-plt.show()
+# classes = ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog','horse', 'ship', 'truck']
+# num_classes = len(classes)
+# samples_per_class = 7
+# for y, cls in enumerate(classes):
+#     idxes = np.flatnonzero(Y_train == y)
+#     idxes = np.random.choice(idxes, samples_per_class, replace=False)
+#     for i, idx in enumerate(idxes):
+#       plt_idx = i * num_classes + y + 1
+#       plt.subplot(samples_per_class, num_classes, plt_idx)
+#       plt.imshow(X_train[idx].astype('uint8'))
+#       plt.axis('off')
+#       if i == 0:
+#           plt.title(cls)
+# plt.show()
 
 #extract the training set ,validation set ,and test set
 num_training = 49000
