@@ -117,7 +117,7 @@ tic = time.time()
 loss_naive, grad_naive = svm_loss_naive(W, x_train, y_train, 0.00001)
 toc = time.time()
 print 'non-vectorize:loss %e timeout %fs' % (loss_naive, toc - tic)
-#vectorzie
+#vectorized
 tic = time.time()
 loss_vectorize, _ = svm_loss_vectorized(W, x_train, y_train, 0.00001)
 toc = time.time()
