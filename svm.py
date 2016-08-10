@@ -10,7 +10,7 @@ from basic.classifiers.linear_svm import *
 import matplotlib.pyplot as plt
 from scipy import *
 from basic.check_gradient import *
-#from basic.classifiers import LinearSVM
+from basic.classifiers.linear_classifier import LinearSVM
 
 
 #初始化
@@ -127,5 +127,41 @@ print 'difference of two methods: %f ' % (loss_naive - loss_vectorize)
 
 #sgd
 svm = LinearSVM()
+tic = time.time()
+loss_hist = svm.train(x_train, y_train, learning_rate=1e-7, regularization=5e4,
+                      num_iters=1500, verbose=True)
+toc = time.time()
+print 'it takes %fs' % (toc - tic)
+y_train_pred = svm.predict(x_train)
+print 'training accuracy: %f' % (np.mean(y_train == y_train_pred), )
+y_val_pred = svm.predict(x_val)
+print 'validation accuracy: %f' % (np.mean(y_val == y_val_pred), )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
