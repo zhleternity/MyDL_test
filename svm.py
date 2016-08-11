@@ -153,7 +153,17 @@ for lr in learning_rate:
         y_train_pred = svm.predict(x_train)
         training_accuracy = np.mean(y_train == y_train_pred)
 
-        y_val_pred = 
+        y_val_pred = svm.predict(x_val)
+        val_accuracy = np.mean(y_val == y_val_pred)
+        results[lr, reg] = (training_accuracy,val_accuracy)
+        if val_accuracy > best_val:
+            best_val = val_accuracy
+            best_svm = svm
+#print all the results
+for lr, reg in sorted(results):
+    training_accuracy, val_accuracy = results[lr, reg]
+    print 'lr %e reg %e train accuracy: %f val accuracy :%f' % (lr, reg, training_accuracy, val_accuracy)
+print 'best validation accuarcy achieved during cross-validation: %f' % best_val
 
 
 
