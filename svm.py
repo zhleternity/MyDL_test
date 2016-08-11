@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 from scipy import *
 from basic.check_gradient import *
 from basic.classifiers.linear_classifier import LinearSVM
+import math
 
 
 #初始化
@@ -164,6 +165,16 @@ for lr, reg in sorted(results):
     training_accuracy, val_accuracy = results[lr, reg]
     print 'lr %e reg %e train accuracy: %f val accuracy :%f' % (lr, reg, training_accuracy, val_accuracy)
 print 'best validation accuarcy achieved during cross-validation: %f' % best_val
+
+#可视化交叉验证结果
+x_scatter = [math.log10(x[0]) for x in results]
+y_scatter = [math.log10(x[1]) for x in results]
+
+sz = [results[x][0] * 1500 for x in results]
+plt.subplot(1, 2, 1)
+plt.scatter(x_scatter, y_scatter, sz)
+plt.xlabel('log learning rate')
+plt.ylabel('log regualrization strength')
 
 
 
