@@ -188,7 +188,19 @@ plt.title('CIFAR-10 validation accuracy')
 y_test_pred = best_svm.predict(x_test)
 test_accuracy = np.mean(y_test == y_test_pred)
 print 'linear svm on raw pixels final test set accuracy: %f' % test_accuracy
-
+#可视化每个类对应的权重
+#由于初始值和学习率的不同,结果可能会有一些差别
+w = best_svm.W[:, :-1]#去掉表示项
+w = w.reshape(10, 32, 32, 3)
+w_min, w_max = np.min(w), np.max(w)
+classes = ['plane', 'car', 'bird', 'cat','deer','dog', 'frog', 'horse', 'ship', 'truck']
+for i in xrange(10):
+    plt.subplot(2, 5, i + 1)
+    #rescale th weights to 0-255
+    w_img = 255.0 * (w[i].squeeze() - w_min) / (w_max - w_min)
+    plt.imshow(w_img.atype('uint8'))
+    plt.axis('off')
+    plt.title(classes[i])
 
 
 
