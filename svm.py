@@ -83,8 +83,8 @@ print 'Test data shape: ', x_test.shape
 #preprocessing:substact the mean of image
 mean_image = np.mean(x_train, axis=0)
 print mean_image[:10]
-plt.figure(figsize=(4, 4))
-plt.imshow(mean_image.reshape((32, 32, 3)).astype('uint8'))
+# plt.figure(figsize=(4, 4))
+# plt.imshow(mean_image.reshape((32, 32, 3)).astype('uint8'))
 # time.sleep(1.0)
 x_train = x_train - mean_image
 x_val = x_val - mean_image
@@ -171,18 +171,18 @@ x_scatter = [math.log10(x[0]) for x in results]
 y_scatter = [math.log10(x[1]) for x in results]
 #training
 sz = [results[x][0] * 1500 for x in results]
-plt.subplot(1, 2, 1)
-plt.scatter(x_scatter, y_scatter, sz)
-plt.xlabel('log learning rate')
-plt.ylabel('log regualrization strength')
-plt.title('CIFAR-10 training accuracy')
+# plt.subplot(1, 2, 1)
+# plt.scatter(x_scatter, y_scatter, sz)
+# plt.xlabel('log learning rate')
+# plt.ylabel('log regualrization strength')
+# plt.title('CIFAR-10 training accuracy')
 #validation
 sz1 = [results[x][1]*1500 for x in results]
-plt.subplot(1, 2, 1)
-plt.scatter(x_scatter, y_scatter, sz1)
-plt.xlabel('log learning rate')
-plt.ylabel('log regualrization strength')
-plt.title('CIFAR-10 validation accuracy')
+# plt.subplot(1, 2, 1)
+# plt.scatter(x_scatter, y_scatter, sz1)
+# plt.xlabel('log learning rate')
+# plt.ylabel('log regualrization strength')
+# plt.title('CIFAR-10 validation accuracy')
 
 #在测试集上看效果
 y_test_pred = best_svm.predict(x_test)
@@ -198,9 +198,9 @@ for i in xrange(10):
     plt.subplot(2, 5, i + 1)
     #rescale th weights to 0-255
     w_img = 255.0 * (w[i].squeeze() - w_min) / (w_max - w_min)
-    plt.imshow(w_img.atype('uint8'))
-    plt.axis('off')
-    plt.title(classes[i])
+    # plt.imshow(w_img.atype('uint8'))
+    # plt.axis('off')
+    # plt.title(classes[i])
 
 
 
