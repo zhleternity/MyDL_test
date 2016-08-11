@@ -147,7 +147,13 @@ verbose = True
 for lr in learning_rate:
     for reg in regularization_strength:
         if verbose: print "Training with hyper parameter learning rate: %e, regularization: %e" % (lr, reg)
-        loss
+        svm = LinearSVM()
+        loss_hist = svm.train(x_train, y_train, learning_rate=lr, regularization=reg,
+                              num_iters=1500, verbose=False)
+        y_train_pred = svm.predict(x_train)
+        training_accuracy = np.mean(y_train == y_train_pred)
+
+        y_val_pred = 
 
 
 
