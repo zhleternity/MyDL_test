@@ -43,7 +43,7 @@ def svm_loss_naive(w, x, y, reg):
     loss += 0.5 * reg * np.sum(w ** 2)
     #add reaularization gradient
     dw += reg * w
-    return  loss, dw
+    return loss, dw
 
 
 def svm_loss_vectorized(w, x, y, reg):
