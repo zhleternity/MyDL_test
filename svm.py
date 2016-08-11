@@ -169,12 +169,31 @@ print 'best validation accuarcy achieved during cross-validation: %f' % best_val
 #可视化交叉验证结果
 x_scatter = [math.log10(x[0]) for x in results]
 y_scatter = [math.log10(x[1]) for x in results]
-
+#training
 sz = [results[x][0] * 1500 for x in results]
 plt.subplot(1, 2, 1)
 plt.scatter(x_scatter, y_scatter, sz)
 plt.xlabel('log learning rate')
 plt.ylabel('log regualrization strength')
+plt.title('CIFAR-10 training accuracy')
+#validation
+sz1 = [results[x][1]*1500 for x in results]
+plt.subplot(1, 2, 1)
+plt.scatter(x_scatter, y_scatter, sz1)
+plt.xlabel('log learning rate')
+plt.ylabel('log regualrization strength')
+plt.title('CIFAR-10 validation accuracy')
+
+#在测试集上看效果
+y_test_pred = best_svm.predict(x_test)
+test_accuracy = np.mean(y_test == y_test_pred)
+print 'linear svm on raw pixels final test set accuracy: %f' % test_accuracy
+
+
+
+
+
+
 
 
 
