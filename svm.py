@@ -195,7 +195,7 @@ w = w.reshape(10, 32, 32, 3)
 w_min, w_max = np.min(w), np.max(w)
 classes = ['plane', 'car', 'bird', 'cat','deer','dog', 'frog', 'horse', 'ship', 'truck']
 for i in xrange(10):
-    plt.subplot(2, 5, i + 1)
+    # plt.subplot(2, 5, i + 1)
     #rescale th weights to 0-255
     w_img = 255.0 * (w[i].squeeze() - w_min) / (w_max - w_min)
     # plt.imshow(w_img.atype('uint8'))
