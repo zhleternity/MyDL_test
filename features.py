@@ -94,4 +94,61 @@ def hog_features(image):
         temp_orientation = np.where(grad_orientation >= 180 / orientations * i, temp_orientation, 0)
         #select magnitudes for those orientations
         cond2 = temp_orientation > 0
-        
+        temp_magnitude = np.where(cond2, grad_magnitude, 0)
+        orientation_histogram[:, :, i] = uniform_filter(temp_magnitude, size=(cx, cy))[cx/2::cx, cy/2::cy].T
+    return orientation_histogram.ravel()
+def color_histogram_hsv(img, nbin=10, xmin=0, xmax=255, normalized=True):
+    """
+    compute color histogram for an image using hue.
+    Inputs:
+    :param img:input rgb image.
+    :param nbin:number of histogram bins,default 10.
+    :param xmin:minimum pixel value
+    :param xmax:maximum pixel value
+    :param normalized:whether to normalize the histogram
+    :return:
+    1D vector of length nbin giving the color histogram over the hue of the input image.
+    """
+    ndim = img.ndim
+    bins = np.linspace(xmin, xmax, nbin+1)
+    hsv = matplotlib.color.rgb_to_hsv(img/xmax) * xmax
+    imhist, bin_edges = np.histogram(hsv[:, :, 0], bins=bins, density=normalized)
+    imhist = imhist * np.diff(bin_edges)
+    return imhist
+pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
