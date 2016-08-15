@@ -53,7 +53,7 @@ def rgb2gray(rgb):
     """
     return np.dot(rgb[..., :3], [0.299, 0.587, 0.144])
 
-def hog_features(gray):
+def hog_features(image):
     """
     produce the HOG features.
     Modified from skimage.feature.hog http://pydoc.net/Python/scikits-image/0.4.2/skimage.feature.hog
@@ -63,9 +63,19 @@ def hog_features(gray):
     Navneet Dalal and Bill Triggs, CVPR 2005.
 
     Inputs:
-    :param gray: the input gray image or rgb image.
+    :param image: the input gray image or rgb image.
     :return:HOG
     """
 
-    #convert 
+    #convert rgb to grayscale if needed
+    if image.ndim == 3:
+        img = rgb2gray(image)
+    else:
+        img = np.atleast_2d(image)
+
+
+    sx,sy = img.shape  #image size
+    orientations = 9  # number of gradient bins
+    cx, cy = (8, 8)  # pixels per call
+
 
