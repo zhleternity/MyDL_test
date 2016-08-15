@@ -73,9 +73,25 @@ def hog_features(image):
     else:
         img = np.atleast_2d(image)
 
-
-    sx,sy = img.shape  #image size
+    # image size
+    sx, sy = img.shape
     orientations = 9  # number of gradient bins
     cx, cy = (8, 8)  # pixels per call
 
-
+    gx = np.zeros(img.shape)
+    gy = np.zeros(img.shape)
+    gx[:, :-1] = np.diff(img, n=1, axis=1)  # compute gradient on x-direction
+    gy[:, :-1] = np.diff(img, n=1, axis=1)  #compoute gradient on y-direction
+    grad_magnitude = np.sqrt(gx ** 2 + gy ** 2)  #gradient magnitude
+    grad_orientation = np.arctan2(gy, (gx + 1e-15)) * (180 / np.pi) + 90  #gradinet orientation
+    n_cells_x = int(np.floor(sx / cx))  #number of cells in x
+    n_cells_y = int(np.floor(sy / cy))  #number of cells in y
+    #compute orientations integral images
+    orientation_histogram = np.zeros(n_cells_x, n_cells_y, orientations)
+    for i in range(orientations):
+        #create new integral image for this orientation isolate orientation in this range
+        temp_orientation = np.where(grad_orientation < 180 / orientations * (i + 1), grad_orientation, 0)
+        temp_orientation = np.where(grad_orientation >= 180 / orientations * i, temp_orientation, 0)
+        #select magnitudes for those orientations
+        cond2 = temp_orientation > 0
+        
