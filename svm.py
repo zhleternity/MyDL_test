@@ -147,8 +147,8 @@ results = []
 best_val = -1#设定交叉验证最佳得分的初始值
 best_svm = None#设定交叉验证最佳SVM参数集的初始值
 verbose = True
-for lr in learning_rate.shape():
-    for reg in regularization_strength.shape():
+for lr in xrange(len(learning_rate)):
+    for reg in xrange(len(regularization_strength)):
         if verbose: print "Training with hyper parameter learning rate: %e, regularization: %e" % (lr, reg)
         svm = LinearSVM()
         loss_hist = svm.train(x_train, y_train, learning_rate=lr, regularization=reg,
