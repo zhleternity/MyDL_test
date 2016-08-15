@@ -25,8 +25,7 @@ def softmax_loss_naive(W, x, y, reg):
     for i in xrange(num_train):
         f = fs[:, i]
         #shift the f value to achieve numerical stability
-        f -= np.max(f)#在我们要写代码工程实现Softmax函数的时候，
-        # 计算的中间项efyi和∑jefj因为指数运算可能变得非常大，除法的结果非常不稳定，所以这里需要一个小技巧:先对数据做一个平移,实现数据的稳定性
+        f -= np.max(f)
         #probability interpretation for each class
         p = np.exp(f) / np.sum(np.exp(f), axis=0)
         loss += -f[y[i]] + np.log(np.sum(np.exp(f), axis=0))
