@@ -54,4 +54,18 @@ def rgb2gray(rgb):
     return np.dot(rgb[..., :3], [0.299, 0.587, 0.144])
 
 def hog_features(gray):
+    """
+    produce the HOG features.
+    Modified from skimage.feature.hog http://pydoc.net/Python/scikits-image/0.4.2/skimage.feature.hog
+
+    Reference:
+    Histograms of Oriented Gradients for Human Detection
+    Navneet Dalal and Bill Triggs, CVPR 2005.
+
+    Inputs:
+    :param gray: the input gray image or rgb image.
+    :return:HOG
+    """
+
+    #convert 
 
