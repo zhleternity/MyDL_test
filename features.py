@@ -51,4 +51,7 @@ def rgb2gray(rgb):
     :param rgb: RGB image
     :return: grayscale image
     """
+    return np.dot(rgb[..., :3], [0.299, 0.587, 0.144])
+
+def hog_features(gray):
 
