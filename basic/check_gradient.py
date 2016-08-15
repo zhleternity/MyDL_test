@@ -13,7 +13,7 @@ def evaluate_numerical_gradient(f, x):
     gradient = np.zeros(x.shape)
     h = 0.00001
     #iterate over all indexes in x
-    #对x的每个维度都计算一遍
+    #compute each dimension on x
     iterate = np.nditer(x, flags=['multi_index'], op_flags=['readwrite'])
     while not iterate.finished:
         #evaluate function at x+h
@@ -25,7 +25,7 @@ def evaluate_numerical_gradient(f, x):
         #computr the partial derivative
         gradient[idx] = (fxh - fx) / h#the slope
         print idx, gradient[idx]
-        iterate.iternext()#step to next dimension开始下一个维度上的偏导计算
+        iterate.iternext()#step to next dimension
     return gradient
 
 def gradient_check_sparse(f, x, analytic_grad, num_checks):
