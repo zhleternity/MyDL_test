@@ -44,3 +44,11 @@ def extract_features(imgs, feature_fns, verbose=False):
             print 'Done extracting features for %d / %d images' % (i, num_images)
     return imgs_features
 
+
+def rgb2gray(rgb):
+    """
+    turn into gray image.
+    :param rgb: RGB image
+    :return: grayscale image
+    """
+
