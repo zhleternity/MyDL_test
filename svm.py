@@ -158,7 +158,7 @@ for lr in learning_rate:
 
         y_val_pred = svm.predict(x_val)
         val_accuracy = np.mean(y_val == y_val_pred)
-        results[lr, reg] = (training_accuracy,val_accuracy)
+        results[lr, reg] = (training_accuracy, val_accuracy)
         if val_accuracy > best_val:
             best_val = val_accuracy
             best_svm = svm
