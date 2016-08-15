@@ -129,44 +129,44 @@ print 'vectorize:loss %e timeout %fs' % (loss_vectorize, toc - tic)
 print 'difference of two methods: %f ' % (loss_naive - loss_vectorize)
 
 #sgd
-svm = LinearSVM()
-tic = time.time()
-loss_hist = svm.train(x_train, y_train, learning_rate=1e-7, regularization=5e4,
-                      num_iters=1500, verbose=True)
-toc = time.time()
-print 'it takes %fs' % (toc - tic)
-y_train_pred = svm.predict(x_train)
-print 'training accuracy: %f' % (np.mean(y_train == y_train_pred), )
-y_val_pred = svm.predict(x_val)
-print 'validation accuracy: %f' % (np.mean(y_val == y_val_pred), )
+# svm = LinearSVM()
+# tic = time.time()
+# loss_hist = svm.train(x_train, y_train, learning_rate=1e-7, regularization=5e4,
+#                       num_iters=1500, verbose=True)
+# toc = time.time()
+# print 'it takes %fs' % (toc - tic)
+# y_train_pred = svm.predict(x_train)
+# print 'training accuracy: %f' % (np.mean(y_train == y_train_pred), )
+# y_val_pred = svm.predict(x_val)
+# print 'validation accuracy: %f' % (np.mean(y_val == y_val_pred), )
 
 #cross-validation to test different learning rate
-# learning_rate = [5e-7, 1e-7, 5e-6, 1e-6, 1e-5]
-# regularization_strength = [5e4, 1e5]
-# results = []
-# best_val = -1  #设定交叉验证最佳得分的初始值
-# best_svm = None  #设定交叉验证最佳SVM参数集的初始值
-# verbose = True
-# for lr in learning_rate:
-#     for reg in regularization_strength:
-#         if verbose: print "Training with hyper parameter learning rate: %e, regularization: %e" % (lr, reg)
-#         svm = LinearSVM()
-#         loss_hist = svm.train(x_train, y_train, learning_rate=lr, regularization=reg,
-#                               num_iters=1500, verbose=False)
-#         y_train_pred = svm.predict(x_train)
-#         training_accuracy = np.mean(y_train == y_train_pred)
-#
-#         y_val_pred = svm.predict(x_val)
-#         val_accuracy = np.mean(y_val == y_val_pred)
-#         results[lr, reg] = (training_accuracy, val_accuracy)
-#         if val_accuracy > best_val:
-#             best_val = val_accuracy
-#             best_svm = svm
-# #print all the results
-# for lr, reg in sorted(results):
-#     training_accuracy, val_accuracy = results[lr, reg]
-#     print 'lr %e reg %e train accuracy: %f val accuracy :%f' % (lr, reg, training_accuracy, val_accuracy)
-# print 'best validation accuarcy achieved during cross-validation: %f' % best_val
+learning_rate = [5e-7, 1e-7, 5e-6, 1e-6, 1e-5]
+regularization_strength = [5e4, 1e5]
+results = []
+best_val = -1  #设定交叉验证最佳得分的初始值
+best_svm = None  #设定交叉验证最佳SVM参数集的初始值
+verbose = True
+for lr in learning_rate:
+    for reg in regularization_strength:
+        if verbose: print "Training with hyper parameter learning rate: %e, regularization: %e" % (lr, reg)
+        svm = LinearSVM()
+        loss_hist = svm.train(x_train, y_train, learning_rate=lr, regularization=reg,
+                              num_iters=1500, verbose=False)
+        y_train_pred = svm.predict(x_train)
+        training_accuracy = np.mean(y_train == y_train_pred)
+
+        y_val_pred = svm.predict(x_val)
+        val_accuracy = np.mean(y_val == y_val_pred)
+        results[lr*1e7, reg] = (training_accuracy, val_accuracy)
+        if val_accuracy > best_val:
+            best_val = val_accuracy
+            best_svm = svm
+#print all the results
+for lr, reg in sorted(results):
+    training_accuracy, val_accuracy = results[lr, reg]
+    print 'lr %e reg %e train accuracy: %f val accuracy :%f' % (lr, reg, training_accuracy, val_accuracy)
+print 'best validation accuarcy achieved during cross-validation: %f' % best_val
 
 #可视化交叉验证结果
 x_scatter = [math.log10(x[0]) for x in results]
