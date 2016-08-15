@@ -143,7 +143,7 @@ print 'difference of two methods: %f ' % (loss_naive - loss_vectorize)
 #cross-validation to test different learning rate
 learning_rate = [5e-7, 1e-7, 5e-6, 1e-6, 1e-5]
 regularization_strength = [5e4, 1e5]
-results = []
+results = {}
 best_val = -1  #设定交叉验证最佳得分的初始值
 best_svm = None  #设定交叉验证最佳SVM参数集的初始值
 verbose = True
@@ -158,7 +158,7 @@ for lr in learning_rate:
 
         y_val_pred = svm.predict(x_val)
         val_accuracy = np.mean(y_val == y_val_pred)
-        results[lr*1e7, reg] = (training_accuracy, val_accuracy)
+        results[lr, reg] = (training_accuracy, val_accuracy)
         if val_accuracy > best_val:
             best_val = val_accuracy
             best_svm = svm
