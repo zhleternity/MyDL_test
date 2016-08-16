@@ -3,16 +3,15 @@
 #__author__ = 'eternity'
 
 import time
-import random
-import numpy as np
-from basic.datasets.data_util import load_CTFAR10
-from basic.classifiers.linear_svm import *
+
 import matplotlib
+import numpy as np
+from basic.classifiers.linear_svm import *
+from basic.datasets.data_util import load_CTFAR10
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from scipy import *
-from basic.check_gradient import *
-from basic.classifiers.linear_classifier import LinearSVM
+from svm.basic.classifiers.linear_classifier import LinearSVM
 import math
 
 

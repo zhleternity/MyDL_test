@@ -1,7 +1,4 @@
 import numpy as np
-import random
-from basic.classifiers.linear_svm import *
-from basic.classifiers.softmax import *
 
 
 class LinearClassifier:
