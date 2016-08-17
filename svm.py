@@ -5,14 +5,15 @@
 import time
 
 import matplotlib
-import numpy as np
-from basic.classifiers.linear_svm import *
-from basic.datasets.data_util import load_CTFAR10
 
-matplotlib.use('Agg')
+from svm.basic.classifiers.linear_svm import *
+from svm.basic.datasets.data_util import load_CTFAR10
+
+# matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from svm.basic.classifiers.linear_classifier import LinearSVM
 import math
+from svm.basic.check_gradient import *
 
 
 #初始化

@@ -1,5 +1,6 @@
 import numpy as np
-
+from svm.basic.classifiers.linear_svm import *
+from svm.basic.classifiers.softmax import *
 
 class LinearClassifier:
     def __init__(self):
