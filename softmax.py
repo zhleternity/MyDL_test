@@ -122,6 +122,22 @@ def get_cifar10_data(num_training=49000, num_validation=1000, num_test=1000):
     test_accuracy = np.mean(y_test == y_test_pred)
     print 'softmax on raw pixels final test set accuracy: %f' % (test_accuracy,)
 
+    # 可视化一下学习到的权重
+    w = best_softmax.W[:, :-1]  # strip out the bias
+    w = w.reshape(10, 32, 32, 3)
+
+    w_min, w_max = np.min(w), np.max(w)
+
+    classes = ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+    for i in xrange(10):
+        plt.subplot(2, 5, i + 1)
+
+        # Rescale the weights to be between 0 and 255
+        wimg = 255.0 * (w[i].squeeze() - w_min) / (w_max - w_min)
+        plt.imshow(wimg.astype('uint8'))
+        plt.axis('off')
+        plt.title(classes[i])
+
 
 
 
