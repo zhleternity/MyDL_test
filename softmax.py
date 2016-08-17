@@ -66,6 +66,22 @@ def get_cifar10_data(num_training=49000, num_validation=1000, num_test=1000):
     f = lambda w: softmax_loss_naive(w, x_train, y_train, 0.0)[0]
     grad_numerical = grad_check_sparse(f, W, grad, 10)
 
+    # 实现一个向量化的损失函数和梯度计算方法
+    tic = time.time()
+    loss_naive, grad_naive = softmax_loss_naive(W, x_train, y_train, 0.00001)
+    toc = time.time()
+    print 'naive loss: %e computed in %fs' % (loss_naive, toc - tic)
+
+    tic = time.time()
+    loss_vectorized, grad_vectorized = softmax_loss_vectorized(W, x_train, y_train, 0.00001)
+    toc = time.time()
+    print 'vectorized loss: %e computed in %fs' % (loss_vectorized, toc - tic)
+
+    # 咱们对比一下用for循环实现的函数和用向量化实现的函数差别
+    grad_difference = np.linalg.norm(grad_naive - grad_vectorized, ord='fro')
+    print 'Loss difference: %f' % np.abs(loss_naive - loss_vectorized)
+    print 'Gradient difference: %f' % grad_difference
+
 
 
 
