@@ -117,6 +117,10 @@ def get_cifar10_data(num_training=49000, num_validation=1000, num_test=1000):
             lr, reg, train_accuracy, val_accuracy)
 
     print 'best validation accuracy achieved during cross-validation: %f' % best_val
+    # 在测试集上评估softmax分类器性能
+    y_test_pred = best_softmax.predict(x_test)
+    test_accuracy = np.mean(y_test == y_test_pred)
+    print 'softmax on raw pixels final test set accuracy: %f' % (test_accuracy,)
 
 
 
