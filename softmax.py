@@ -82,6 +82,42 @@ def get_cifar10_data(num_training=49000, num_validation=1000, num_test=1000):
     print 'Loss difference: %f' % np.abs(loss_naive - loss_vectorized)
     print 'Gradient difference: %f' % grad_difference
 
+    # 咱们实现了一个softmax分类器
+    results = {}
+    best_val = -1
+    best_softmax = None
+    learning_rates = [5e-7, 1e-7, 5e-6, 1e-6]
+    regularization_strengths = [5e4, 1e5]
+
+    import sys
+    verbose = True
+    for lr in learning_rates:
+        for reg in regularization_strengths:
+            if verbose: sys.stdout.write("Training with hyper parameter learning rate: %e, regularization: %e\n"
+                                         % (lr, reg))
+            softmax = Softmax()
+            loss_hist = softmax.train(X_train, y_train, learning_rate=lr, reg=reg,
+                                      num_iters=1500, verbose=False)
+
+            y_train_pred = softmax.predict(X_train)
+            training_accuracy = np.mean(y_train == y_train_pred)
+
+            y_val_pred = softmax.predict(X_val)
+            val_accuracy = np.mean(y_val == y_val_pred)
+
+            results[lr, reg] = (training_accuracy, val_accuracy)
+            if val_accuracy > best_val:
+                best_val = val_accuracy
+                best_softmax = softmax
+
+    # 输出结果
+    for lr, reg in sorted(results):
+        train_accuracy, val_accuracy = results[(lr, reg)]
+        print 'lr %e reg %e train accuracy: %f val accuracy: %f' % (
+            lr, reg, train_accuracy, val_accuracy)
+
+    print 'best validation accuracy achieved during cross-validation: %f' % best_val
+
 
 
 
