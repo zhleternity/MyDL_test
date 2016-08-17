@@ -59,6 +59,13 @@ def get_cifar10_data(num_training=49000, num_validation=1000, num_test=1000):
     print 'loss: %f' % loss
     print 'sanity check: %f' % (-np.log10(0.1))
 
+    # 用多层for循环实现一个梯度计算
+    loss, grad = softmax_loss_naive(W, x_train, y_train, 0.0)
+
+    # 同样要做一下梯度检查
+    f = lambda w: softmax_loss_naive(w, x_train, y_train, 0.0)[0]
+    grad_numerical = grad_check_sparse(f, W, grad, 10)
+
 
 
 
