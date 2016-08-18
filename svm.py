@@ -111,8 +111,8 @@ print 'loss: %f' % (loss, )
 loss, gradient = svm_loss_naive(W, x_train, y_train, 0.0)
 #gradient check :check out weather the numerical gradient and analytic gradient is identical,because the latter is fast,
 # but eary to error
-f = lambda w: svm_loss_naive(w, x_train, y_train, 0.0)[0]
-grad_numerical = gradient_check_sparse(f, W, gradient, 10)
+f = lambda w: svm_loss_naive(w, x_train, y_train, 0.0)[0]  #  loss
+grad_numerical = gradient_check_sparse(f, W, gradient, 10)  #对loss求导数
 
 #two methods to cpmpute the loss of svm:generately,vectorize method is faster
 #naive loss of non-vectorize svm ,loss computing

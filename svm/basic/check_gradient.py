@@ -51,6 +51,7 @@ def gradient_check_sparse(f, x, analytic_grad, num_checks):
         relative_error = abs(grad_numerical - grad_analytic) / (abs(grad_numerical) + abs(grad_analytic))  #  compare and adjust,if it is correct,
         # then begin to compute the analytic grad
         print 'numerical: %f analytic: %f,relative error: %.3f' % (grad_numerical, grad_analytic, relative_error)
+    return grad_analytic
 
 
 
