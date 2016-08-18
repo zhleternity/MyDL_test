@@ -66,7 +66,7 @@ class LinearSVM(LinearClassifier):
 
 
 class Softmax(LinearClassifier):
-    """A subclass that uses cnn + cross-entropy loss function"""
+    """A subclass that uses NN + cross-entropy loss function"""
     def loss(self, x_batch, y_batch, regularization):
         return softmax_loss_vectorized(self.W, x_batch, y_batch, regularization)
 
