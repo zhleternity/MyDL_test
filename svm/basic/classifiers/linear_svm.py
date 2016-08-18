@@ -7,9 +7,9 @@ def svm_loss_naive(w, x, y, reg):
     """
     Structured SVM loss function, naive implementation(with loops)
     inputs:
-    :param w: C x D array of weights
-    :param x: D x N array of data.Data are D-dimensional columns
-    :param y: 1-dimensional array of length N with labels 0...k-1,for k classes
+    :param w: C x D array of weights (10x3073)
+    :param x: D x N array of data.Data are D-dimensional columns (3073x49000)
+    :param y: 1-dimensional array of length N with labels 0...k-1,for k classes(k=10)
     :param reg: (float) regularization strength
     :return:
     a tuple of :
@@ -18,17 +18,18 @@ def svm_loss_naive(w, x, y, reg):
     """
     dw = np.zeros(w.shape)#initialize the gradient as zero
     #compute the loss and the gradient
-    num_classes = w.shape[0]
-    num_train = x.shape[1]
+    num_classes = w.shape[0]  #  10 classes
+    num_train = x.shape[1]  # 49000
     loss = 0.0
     for i in xrange(num_train):
         scores = w.dot(x[:, i])
         correct_class_score = scores[y[i]]
         count = 0
+        delta = 1
         for j in xrange(num_classes):
             if j == y[i]:
                 continue
-            margin = scores[j] - correct_class_score + 1# note delta equals to 1
+            margin = scores[j] - correct_class_score + delta# note delta equals to 1
             if margin > 0:
                 loss += margin
                 dw[j, :] += x[:, i]

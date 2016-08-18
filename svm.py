@@ -102,7 +102,7 @@ print x_train.shape, x_val.shape, x_test.shape
 #evaluate the efficiency of svm_loss_naive
 
 #produce the initial weights of svm
-W = np.random.randn(10, 3073) * 0.0001
+W = np.random.randn(10, 3073) * 0.0001  #  10x3073
 #compute the gradient and loss under the wieght W
 loss, gradient = svm_loss_naive(W, x_train, y_train, 0.00001)
 print 'loss: %f' % (loss, )
