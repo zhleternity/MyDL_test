@@ -5,7 +5,8 @@ from random import randrange
 
 def evaluate_numerical_gradient(f, x):
     """
-    given x,solve the gradient about f,this is numerical gradient
+    given x,solve the gradient of f,this is numerical gradient
+    the equation:(f(x+h) -f(x-h))/2h
     :param f: should be a function that takes a single argument
     :param x: is the point (numpy array)to evaluate the gradient
     """
@@ -20,7 +21,7 @@ def evaluate_numerical_gradient(f, x):
         idx = iterate.multi_index
         x[idx] += h#increment by h
         fxh = f(x)#evaluate f(x+h)
-        x[idx] -= h#restore to previous value (very important)1************589  `
+        x[idx] -= h#restore to previous value (very important)
 
         #computr the partial derivative
         gradient[idx] = (fxh - fx) / h#the slope
