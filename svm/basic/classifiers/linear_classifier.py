@@ -9,7 +9,7 @@ class LinearClassifier:
     def train(self, x, y, learning_rate=1e-3, regularization=1e-5, num_iters=100,
               batch_size=200, verbose=False):
         """
-        use SGD to train classifiers
+        use SGD to train classifiers,tune the wight W
         inputs:
         :param x: D x N array of training data ,each training point is a D-dimensional column.
         :param y: 1-dimensional array of length N with labels 0...k-1,for k classes.
@@ -36,7 +36,7 @@ class LinearClassifier:
             x_batch = x[:, idx]
             y_batch = y[idx]
             #evaluate loss and gradient
-            loss, grad = self.loss(x_batch, y_batch, regularization)
+            loss, grad = self.loss(x_batch, y_batch, regularization)  #  compute the loss and grad
             loss_history.append(loss)
             self.W -= learning_rate * grad
             if verbose and it % 100 == 0:
@@ -45,7 +45,7 @@ class LinearClassifier:
 
     def predict(self, x):
         """
-        predict the network by using the well-trained classifier
+        predict the network by using the well-trained classifier,compute the predict label y
         :param x:  D x N array of training data ,each training point is a D-dimensional column.
         :return:
         y_pred:predicted labels for the data in x.y_pred is a 1-dimensional array of length N,
