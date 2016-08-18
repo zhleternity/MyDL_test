@@ -49,7 +49,7 @@ def svm_loss_naive(w, x, y, reg):
 
 def svm_loss_vectorized(w, x, y, reg):
     """
-    Structured SVM loss function ,vectorized implementtion.
+    Structured SVM loss function ,vectorized implementtion.(without loop)
     inputs and outputs are same with the function svm_loss_naive
     """
     loss = 0.0
@@ -59,7 +59,7 @@ def svm_loss_vectorized(w, x, y, reg):
 
     #select all the correct class score
     correct_class_score = scores[y, range(num_train)]
-    margins = np.maximum(scores - correct_class_score + 1, 0)
+    margins = np.maximum(scores - correct_class_score + 1, 0)  #hinge loss(keypoint)
     margins[y, range(num_train)] = 0
     loss = np.sum(margins) / num_train
     loss += 0.5 * reg * np.sum(w ** 2)

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d196262c-9c1e-4876-a938-312be25c1c64" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svm.py" afterPath="$PROJECT_DIR$/svm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svm/basic/classifiers/linear_svm.py" afterPath="$PROJECT_DIR$/svm/basic/classifiers/linear_svm.py" />
     </list>
     <ignored path="dltest.iws" />
@@ -97,8 +95,8 @@
       <file leaf-file-name="linear_svm.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svm/basic/classifiers/linear_svm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+            <state relative-caret-position="213">
+              <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
               <folding>
                 <element signature="e#15#33#0" expanded="true" />
               </folding>
@@ -144,8 +142,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1571" />
-    <option name="y" value="263" />
+    <option name="x" value="1522" />
+    <option name="y" value="118" />
     <option name="width" value="1400" />
     <option name="height" value="797" />
   </component>
@@ -457,7 +455,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1571" y="263" width="1400" height="797" extended-state="0" />
+    <frame x="1522" y="118" width="1400" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17766498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -838,8 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/svm/basic/classifiers/linear_svm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        <state relative-caret-position="213">
+          <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
           <folding>
             <element signature="e#15#33#0" expanded="true" />
           </folding>
