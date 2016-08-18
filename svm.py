@@ -192,7 +192,7 @@ test_accuracy = np.mean(y_test == y_test_pred)
 print 'linear svm on raw pixels final test set accuracy: %f' % test_accuracy
 #可视化每个类对应的权重
 #由于初始值和学习率的不同,结果可能会有一些差别
-w = best_svm.W[:, :-1]#去掉表示项
+w = best_svm.W[:, :-1]#去掉bias项
 w = w.reshape(10, 32, 32, 3)
 w_min, w_max = np.min(w), np.max(w)
 classes = ['plane', 'car', 'bird', 'cat','deer','dog', 'frog', 'horse', 'ship', 'truck']

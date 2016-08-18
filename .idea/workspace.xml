@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d196262c-9c1e-4876-a938-312be25c1c64" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svm/basic/classifiers/linear_classifier.py" afterPath="$PROJECT_DIR$/svm/basic/classifiers/linear_classifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svm.py" afterPath="$PROJECT_DIR$/svm.py" />
     </list>
     <ignored path="dltest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="svm.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="svm.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-342">
-              <caret line="118" column="17" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="17" />
+            <state relative-caret-position="608">
+              <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
               <folding>
                 <element signature="e#58#69#0" expanded="true" />
               </folding>
@@ -80,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linear_classifier.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="linear_classifier.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svm/basic/classifiers/linear_classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="536">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -145,9 +145,9 @@
         <option value="$PROJECT_DIR$/svm/softmax.py" />
         <option value="$PROJECT_DIR$/softmax.py" />
         <option value="$PROJECT_DIR$/svm/basic/classifiers/linear_svm.py" />
-        <option value="$PROJECT_DIR$/svm.py" />
         <option value="$PROJECT_DIR$/svm/basic/check_gradient.py" />
         <option value="$PROJECT_DIR$/svm/basic/classifiers/linear_classifier.py" />
+        <option value="$PROJECT_DIR$/svm.py" />
       </list>
     </option>
   </component>
@@ -832,22 +832,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svm.py">
+    <entry file="file://$PROJECT_DIR$/svm/basic/classifiers/linear_classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342">
-          <caret line="118" column="17" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="17" />
+        <state relative-caret-position="536">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
-            <element signature="e#58#69#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svm/basic/classifiers/linear_classifier.py">
+    <entry file="file://$PROJECT_DIR$/svm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="608">
+          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#58#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
