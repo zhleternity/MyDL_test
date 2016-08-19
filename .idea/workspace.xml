@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d196262c-9c1e-4876-a938-312be25c1c64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NN/nn/classifier_trainer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NN/nn/classifier_trainer.py" afterPath="$PROJECT_DIR$/NN/nn/classifier_trainer.py" />
     </list>
     <ignored path="dltest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="-1596">
+              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
               </folding>
@@ -47,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classifier_trainer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="classifier_trainer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NN/nn/classifier_trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="45" column="82" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="82" />
+            <state relative-caret-position="194">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -173,14 +172,14 @@
         <option value="$PROJECT_DIR$/NN/nn/classifiers/neural_net.py" />
         <option value="$PROJECT_DIR$/NN/nn/__init__.py" />
         <option value="$PROJECT_DIR$/NN/nn/gradient_check.py" />
-        <option value="$PROJECT_DIR$/NN/nnTestDemo.py" />
         <option value="$PROJECT_DIR$/NN/nn/classifier_trainer.py" />
+        <option value="$PROJECT_DIR$/NN/nnTestDemo.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1558" />
-    <option name="y" value="383" />
+    <option name="x" value="1573" />
+    <option name="y" value="557" />
     <option name="width" value="1400" />
     <option name="height" value="797" />
   </component>
@@ -524,7 +523,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1558" y="383" width="1400" height="797" extended-state="0" />
+    <frame x="1573" y="557" width="1400" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17766498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -618,7 +617,7 @@
         <state relative-caret-position="2109">
           <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
           <folding>
-            <element signature="e#0#17#0" expanded="true" />
+            <element signature="e#0#17#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -714,7 +713,7 @@
         <state relative-caret-position="2109">
           <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
           <folding>
-            <element signature="e#0#17#0" expanded="true" />
+            <element signature="e#0#17#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -848,7 +847,7 @@
         <state relative-caret-position="1969">
           <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
           <folding>
-            <element signature="e#0#17#0" expanded="true" />
+            <element signature="e#0#17#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -947,21 +946,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
+    <entry file="file://$PROJECT_DIR$/NN/nn/classifier_trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="194">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NN/nn/classifier_trainer.py">
+    <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="45" column="82" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="82" />
-          <folding />
+        <state relative-caret-position="-1596">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding>
+            <element signature="e#39#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
