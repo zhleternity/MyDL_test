@@ -32,13 +32,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="99">
+              <caret line="75" column="56" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gradient_check.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NN/nn/gradient_check.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#73#92#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,18 +95,6 @@
               <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding>
                 <element signature="e#35#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="features.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/svm/features.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1969">
-              <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,12 +172,13 @@
         <option value="$PROJECT_DIR$/NN/nn/classifiers/neural_net.py" />
         <option value="$PROJECT_DIR$/NN/nn/__init__.py" />
         <option value="$PROJECT_DIR$/NN/nnTestDemo.py" />
+        <option value="$PROJECT_DIR$/NN/nn/gradient_check.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1851" />
-    <option name="y" value="283" />
+    <option name="y" value="284" />
     <option name="width" value="1400" />
     <option name="height" value="797" />
   </component>
@@ -521,7 +522,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1851" y="283" width="1400" height="797" extended-state="0" />
+    <frame x="1851" y="284" width="1400" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17766498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -605,7 +606,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#35#48#0" expanded="true" />
+            <element signature="e#35#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -701,7 +702,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#35#48#0" expanded="true" />
+            <element signature="e#35#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -835,7 +836,7 @@
         <state relative-caret-position="38">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#35#48#0" expanded="true" />
+            <element signature="e#35#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -936,10 +937,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="99">
+          <caret line="75" column="56" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NN/nn/gradient_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#73#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
