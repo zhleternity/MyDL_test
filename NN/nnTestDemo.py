@@ -7,8 +7,12 @@ import matplotlib.pyplot as plt
 from nn.classifiers.neural_net import two_layer_net
 from nn.gradient_check import evaluate_numerical_grad
 from nn.classifier_trainer import ClassifierTrainer
+from svm.basic.datasets.data_util import load_CTFAR10
 
 #  This is a multi-layer NN on the dataset of CIFAR-10
+
+
+
 #  we can ignore the initial set
 plt.rcParams['figure.figsize'] = (10.0, 8.0)  #  set default size of plots
 plt.rcParams['image.interpolation'] = 'nearest'
@@ -125,6 +129,62 @@ best_model2, loss_history2, _, _ = trainer2.train(x, y, x, y,
                                                   num_epoches=100, verbose=False)
 correct_loss2 = 0.439368
 print 'Final loss with RMSProp: %f. We get : %f' % (loss_history2[-1], correct_loss2)
+
+#  ##########################################
+#load tha cifar10 data
+def get_CIFAR10_data(num_training=49000, num_validation=1000, num_test=1000):
+    cifar10_dir = 'svm/basic/datasets/cifar-10-batches-py'
+    x_train, y_train, x_test, y_test = load_CTFAR10(cifar10_dir)
+    mask = range(num_training, num_training + num_validation)
+    x_val = x_train[mask]
+    y_val = y_train[mask]
+    mask = range(num_training)
+    x_train = x_train[mask]
+    y_train = y_train[mask]
+    mask = range(num_test)
+    x_test = x_test[mask]
+    y_test = y_test[mask]
+
+    mean_image = np.mean(x_train, axis=0)
+    x_train -= mean_image
+    x_val -= mean_image
+    x_test -= mean_image
+
+    x_train = x_train.reshape(num_training, -1)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
