@@ -3,13 +3,13 @@
 
 
 import numpy as np
-# import matplotlib.pyplot as plt
+
+from datasets.data_util import load_CTFAR10
+from nn.classifier_trainer import ClassifierTrainer
 from nn.classifiers.neural_net import init_two_layer_model
 from nn.classifiers.neural_net import two_layer_net
 from nn.gradient_check import evaluate_numerical_grad
-from nn.classifier_trainer import ClassifierTrainer
-from svm.basic.datasets.data_util import load_CTFAR10
-from NN.nn.visibale_utils import visualize_grid
+
 
 #  This is a multi-layer NN on the dataset of CIFAR-10
 

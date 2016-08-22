@@ -2,18 +2,15 @@
 #coding=utf-8
 #__author__ = 'eternity'
 
+import math
 import time
 
-import matplotlib
-
-from svm.basic.classifiers.linear_svm import *
-from svm.basic.datasets.data_util import load_CTFAR10
-
-# matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from svm.basic.classifiers.linear_classifier import LinearSVM
-import math
+
+from datasets.data_util import load_CTFAR10
 from svm.basic.check_gradient import *
+from svm.basic.classifiers.linear_classifier import LinearSVM
+from svm.basic.classifiers.linear_svm import *
 
 
 #初始化

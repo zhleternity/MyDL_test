@@ -2,12 +2,12 @@
 #author='eternity'
 
 
-import random
-import numpy as np
-import matplotlib.pyplot as plt
-from svm.basic.datasets.data_util import load_CTFAR10
-from svm.basic.classifiers.softmax import *
 import time
+
+import matplotlib.pyplot as plt
+
+from datasets.data_util import load_CTFAR10
+from svm.basic.classifiers.softmax import *
 
 plt.rcParams['figure.figsize'] = (10.0, 8.0) #set the plot params
 plt.rcParams['image.interpolation'] = 'nearest'
