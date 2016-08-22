@@ -66,14 +66,14 @@ class ClassifierTrainer(object):
                 print 'starting iteration', it
 
             #get batch of data
-                if sample_batches:
-                    batch_mask = np.random.choice(N, batch_size)
-                    X_batch = X[batch_mask]
-                    y_batch = y[batch_mask]
-                else:
-                    #  No SGD used, full gradient descent
-                    X_batch = X
-                    y_batch = y
+            if sample_batches:
+                batch_mask = np.random.choice(N, batch_size)
+                X_batch = X[batch_mask]
+                y_batch = y[batch_mask]
+            else:
+                #  No SGD used, full gradient descent
+                X_batch = X
+                y_batch = y
 
                 #  evaluate cost and grad
                 cost, grads = loss_func(X_batch, model, y_batch, regularization)
@@ -109,34 +109,40 @@ class ClassifierTrainer(object):
                         #  decay the learning rate
                         learning_rate *= learning_rate_decay
                         epoch += 1
-            # evaluate train accuracy
-                if N > 1000:
-                    train_mask = np.random.choice(N, 1000)
-                    X_train_subset = X[train_mask]
-                    y_train_subset = y[train_mask]
-                else:
-                    X_train_subset = X
-                    y_train_subset = y
-                scores_train = loss_func(X_train_subset, model)
-                y_predict_train = np.argmax(scores_train, axis=1)
-                train_accuracy = np.mean(y_predict_train == y_train_subset)
-                train_accuracy_history.append(train_accuracy)
-            #  evaluate validation accuracy
-            scores_val = loss_func(X_val, model)
-            y_predict_val = np.argmax(scores_val, axis=1)
-            val_accuracy = np.mean(y_predict_val == y_val)
-            val_accuracy_history.append(val_accuracy)
+                    # evaluate train accuracy
+                    if N > 1000:
+                        train_mask = np.random.choice(N, 1000)
+                        X_train_subset = X[train_mask]
+                        y_train_subset = y[train_mask]
+                    else:
+                        X_train_subset = X
+                        y_train_subset = y
+                    scores_train = loss_func(X_train_subset, model)
+                    y_predict_train = np.argmax(scores_train, axis=1)
+                    train_accuracy = np.mean(y_predict_train == y_train_subset)
+                    train_accuracy_history.append(train_accuracy)
+                    #  evaluate validation accuracy
+                    scores_val = loss_func(X_val, model)
+                    y_predict_val = np.argmax(scores_val, axis=1)
+                    val_accuracy = np.mean(y_predict_val == y_val)
+                    val_accuracy_history.append(val_accuracy)
 
-            #  keep track of the best model based on validation accuracy
-            if val_accuracy > best_val_accuracy:
-                #  make a copy of the model
-        best_val_accuracy = val_accuracy
-        best_model = {}
-        for p in model:
-            best_model[p] = model[p].copy()
-        #  print progress if needed
-        if verbose:
-            print 'finished optimization.Best validation accuracy : %f' % (best_val_accuracy, )
+                    #  keep track of the best model based on validation accuracy
+                    if val_accuracy > best_val_accuracy:
+                        #  make a copy of the model
+                        best_val_accuracy = val_accuracy
+                        best_model = {}
+                        for p in model:
+                            best_model[p] = model[p].copy()
+                    #  print progress if needed
+                    if verbose:
+                        print 'Finished epoch %d / %d : cost %f, train: %f, val %f, lr %e' % (epoch, num_epoches, cost,
+                                                                                              train_accuracy,
+                                                                                              val_accuracy,
+                                                                                              learning_rate)
+                if verbose:
+                    print 'finished optimization.Best validation accuracy : %f' % (best_val_accuracy,)
+
         #  return the best model and training history statistics
         return best_model, loss_history, train_accuracy_history, val_accuracy_history
 
