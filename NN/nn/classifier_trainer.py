@@ -107,8 +107,8 @@ class ClassifierTrainer(object):
                 if first_it or epoch_end or accuracy_check:
                     if it > 0 and epoch_end:
                         #  decay the learning rate
-                learning_rate *= learning_rate_decay
-                epoch += 1
+                        learning_rate *= learning_rate_decay
+                        epoch += 1
             # evaluate train accuracy
                 if N > 1000:
                     train_mask = np.random.choice(N, 1000)
