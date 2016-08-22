@@ -8,6 +8,7 @@ from nn.classifiers.neural_net import *
 from nn.gradient_check import evaluate_numerical_grad
 from nn.classifier_trainer import ClassifierTrainer
 from svm.basic.datasets.data_util import load_CTFAR10
+from nn.visibale_utils import visualize_grid
 
 #  This is a multi-layer NN on the dataset of CIFAR-10
 
@@ -172,7 +173,44 @@ best_model0, loss_history0, train_acc, val_acc = trainer0.train(x_train, y_train
 #   2.make the weights of the first layer visible
 #  plot the loss function and train / validation accuracies
 # plt.subplot(2, 1, 1)
+def show_net_weights(model):
+    plt.imshow(visualize_grid(model0['W1'].T.reshape(-1, 32, 32, 3), padding=3).astype('uint8'))
+    plt.gca().axis('off')
+    plt.show()
 
+
+
+#  fine-tune
+best_model3 = None  #  store the best result on the validation set
+best_val_acc = -1
+learning_rates = [1e-5, 5e-5, 1e-4]
+model_capacity = [200, 300, 500, 1000]
+regularization_strengths = [1e0, 1e1]
+results = {}
+verbose = True
+
+for hidden_size in model_capacity:
+    for lr in learning_rates:
+        for reg in regularization_strengths:
+            if verbose:
+                print 'Training start: '
+                print 'lr = %e, regularization = %e, hidden_size = %e' % (lr, reg, hidden_size)
+
+            model3 = init_two_layer_model(32*32*3, hidden_size, 10)
+            trainer3 = ClassifierTrainer()
+            output_model3, loss_history3, train_acc3, val_acc3 = trainer3.train(x_train, y_train, x_val, y_val,
+                                                                                model3, two_layer_net,
+                                                                                num_epoches=5, regularization=1.0,
+                                                                                momentum=0.9, learning_rate_decay=0.95,
+                                                                                learning_rate=lr)
+            results[hidden_size, lr, reg] = (loss_history3, train_acc3, val_acc3)
+            if verbose:
+                print 'Training Complete: '
+                print 'Training accuracy = %f, validation accuracy = %f ' % (train_acc3[-1], val_acc3[-1])
+            if val_acc3[-1] > best_val_acc:
+                best_val_acc = val_acc3[-1]
+                best_model3 = output_model3
+print 'best validation accyracy achieved during cross-validation : %f' % best_val_acc
 
 
 

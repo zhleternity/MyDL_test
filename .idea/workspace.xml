@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d196262c-9c1e-4876-a938-312be25c1c64" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NN/nn/visibale_utils.py" afterPath="$PROJECT_DIR$/NN/nn/visibale_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NN/nnTestDemo.py" afterPath="$PROJECT_DIR$/NN/nnTestDemo.py" />
     </list>
     <ignored path="dltest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="212" column="85" selection-start-line="212" selection-start-column="85" selection-end-line="212" selection-end-column="85" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
               </folding>
@@ -46,12 +47,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="visibale_utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="visibale_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NN/nn/visibale_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-817">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="494">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+              <folding>
+                <element signature="e#73#100#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,8 +62,8 @@
       <file leaf-file-name="classifier_trainer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NN/nn/classifier_trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="140" column="65" selection-start-line="140" selection-start-column="65" selection-end-line="140" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -173,14 +176,14 @@
         <option value="$PROJECT_DIR$/NN/nn/__init__.py" />
         <option value="$PROJECT_DIR$/NN/nn/gradient_check.py" />
         <option value="$PROJECT_DIR$/NN/nn/classifier_trainer.py" />
-        <option value="$PROJECT_DIR$/NN/nnTestDemo.py" />
         <option value="$PROJECT_DIR$/NN/nn/visibale_utils.py" />
+        <option value="$PROJECT_DIR$/NN/nnTestDemo.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1634" />
-    <option name="y" value="147" />
+    <option name="x" value="1566" />
+    <option name="y" value="298" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
   </component>
@@ -546,7 +549,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1634" y="147" width="1440" height="805" extended-state="0" />
+    <frame x="1566" y="298" width="1440" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1726568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -985,29 +988,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NN/nn/visibale_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="e#73#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NN/nn/classifier_trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="140" column="65" selection-start-line="140" selection-start-column="65" selection-end-line="140" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="212" column="85" selection-start-line="212" selection-start-column="85" selection-end-line="212" selection-end-column="85" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NN/nn/visibale_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-817">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
