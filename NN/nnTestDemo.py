@@ -173,10 +173,10 @@ best_model0, loss_history0, train_acc, val_acc = trainer0.train(x_train, y_train
 #   2.make the weights of the first layer visible
 #  plot the loss function and train / validation accuracies
 # plt.subplot(2, 1, 1)
-def show_net_weights(model):
-    plt.imshow(visualize_grid(model0['W1'].T.reshape(-1, 32, 32, 3), padding=3).astype('uint8'))
-    plt.gca().axis('off')
-    plt.show()
+# def show_net_weights(model):
+#     plt.imshow(visualize_grid(model0['W1'].T.reshape(-1, 32, 32, 3), padding=3).astype('uint8'))
+#     plt.gca().axis('off')
+#     plt.show()
 
 
 
