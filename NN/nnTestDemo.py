@@ -4,7 +4,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from nn.classifiers.neural_net import two_layer_net
+from nn.classifiers.neural_net import *
 from nn.gradient_check import evaluate_numerical_grad
 from nn.classifier_trainer import ClassifierTrainer
 from svm.basic.datasets.data_util import load_CTFAR10
@@ -151,7 +151,25 @@ def get_CIFAR10_data(num_training=49000, num_validation=1000, num_test=1000):
     x_test -= mean_image
 
     x_train = x_train.reshape(num_training, -1)
-    
+    x_val = x_val.reshape(num_validation, -1)
+    x_test = x_test.reshape(num_test, -1)
+
+    return x_train, y_train, x_val, y_val, x_test, y_test
+
+#  train the NN
+#  We use SGD with momentum to optimize.After each iteration,decrease the learning rate a bit
+
+x_train, y_train, x_val, y_val, x_test, y_test = get_CIFAR10_data()
+model0 = init_two_layer_model(32*32*3, 100, 10)  #  input_size, hidden size, number of classes
+trainer0 = ClassifierTrainer()
+best_model0, loss_history0, train_acc, val_acc = trainer0.train(x_train, y_train, x_val, y_val,
+                                                                model0, two_layer_net,
+                                                                regularization=1.0, learning_rate=1e-2, momentum=0.9,
+                                                                learning_rate_decay=1, num_epoches=5, verbose=False)
+#  monitor the training process
+#  First, we should ensure the training state is normal,so we can know the state by the means of below:
+#   1.
+
 
 
 
