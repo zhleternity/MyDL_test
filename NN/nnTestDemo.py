@@ -3,7 +3,7 @@
 
 
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from nn.classifiers.neural_net import *
 from nn.gradient_check import evaluate_numerical_grad
 from nn.classifier_trainer import ClassifierTrainer
@@ -15,9 +15,9 @@ from nn.visibale_utils import visualize_grid
 
 
 #  we can ignore the initial set
-plt.rcParams['figure.figsize'] = (10.0, 8.0)  #  set default size of plots
-plt.rcParams['image.interpolation'] = 'nearest'
-plt.rcParams['image.cmap'] = 'gray'
+# plt.rcParams['figure.figsize'] = (10.0, 8.0)  #  set default size of plots
+# plt.rcParams['image.interpolation'] = 'nearest'
+# plt.rcParams['image.cmap'] = 'gray'
 
 #for auto-reloading external modules
 #see http://stackoverflow.com/questions/1907993/autoreload-of-modules-in-ipython
@@ -85,7 +85,7 @@ loss, grads = two_layer_net(x, model, y, regularization)
 for param_name in grads:
     param_grad_num = evaluate_numerical_grad(lambda W: two_layer_net(x, model, y, regularization)[0],
                                              model[param_name], verbose=False)
-    print  '%s maximum relative error: %e' % (relative_error(param_grad_num, grads[param_name]))
+    print '%s maximum relative error: %e' % (relative_error(param_grad_num, grads[param_name]))
 
 
 
