@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d196262c-9c1e-4876-a938-312be25c1c64" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NN/nn/visibale_utils.py" afterPath="$PROJECT_DIR$/NN/nn/visibale_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NN/nnTestDemo.py" afterPath="$PROJECT_DIR$/NN/nnTestDemo.py" />
     </list>
     <ignored path="dltest.iws" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="212" column="85" selection-start-line="212" selection-start-column="85" selection-end-line="212" selection-end-column="85" />
+            <state relative-caret-position="399">
+              <caret line="216" column="74" selection-start-line="216" selection-start-column="74" selection-end-line="216" selection-end-column="74" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
               </folding>
@@ -182,8 +181,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1566" />
-    <option name="y" value="298" />
+    <option name="x" value="1697" />
+    <option name="y" value="122" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
   </component>
@@ -549,7 +548,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1566" y="298" width="1440" height="805" extended-state="0" />
+    <frame x="1697" y="122" width="1440" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1726568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1008,8 +1007,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="212" column="85" selection-start-line="212" selection-start-column="85" selection-end-line="212" selection-end-column="85" />
+        <state relative-caret-position="399">
+          <caret line="216" column="74" selection-start-line="216" selection-start-column="74" selection-end-line="216" selection-end-column="74" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
           </folding>
