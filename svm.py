@@ -7,11 +7,10 @@ import time
 
 import matplotlib.pyplot as plt
 
-from datasets.data_util import load_CTFAR10
+from NN.nn.datasets.data_util import load_CTFAR10
 from svm.basic.check_gradient import *
 from svm.basic.classifiers.linear_classifier import LinearSVM
 from svm.basic.classifiers.linear_svm import *
-
 
 #初始化
 plt.rcParams['figure.figsize'] = (10.0, 8.0)
