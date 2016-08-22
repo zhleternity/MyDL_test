@@ -90,16 +90,30 @@ for param_name in grads:
 #  fixed-step SGD
 model = init_toy_data()
 trainer = ClassifierTrainer()
-#Caution:here,the data is man-made,and small scale,so set 'sample_batched' to False;
+#  Caution:here,the data is man-made,and small scale,so set 'sample_batched' to False;
 best_model, loss_history, _, _ = trainer.train(x, y, x, y,
-                                               model, two_layer_net,
+                                               model, two_layer_net,regularization=0.001,
                                                learning_rate=1e-1, momentum=0.0,
                                                learning_rate_decay=1, update='sgd',
                                                sample_batches=False, num_epoches=100,
                                                verbose=False)
 print 'Final loss with vanilla SGD: %f' % (loss_history[-1], )
 
-#
+#  SGD with momentum,you will see that the loss is less than above
+model1 = init_toy_model()
+trainer1 = ClassifierTrainer()
+#  call the trainer to optimize the loss
+#  Notice that we are using sample_batches=False,so we are performing SGD(no sampled batches of data)
+best_model1, loss_history1, _, _ = trainer1.train(x, y, x, y,
+                                                  model1, two_layer_net,
+                                                  regularization=0.001, learning_rate=1e-1,
+                                                  momentum=0.9, learning_rate_decay=1,
+                                                  update='momentum', sample_batches=False,
+                                                  num_epoches=100, verbose=False)
+correct_loss = 0.494394
+print 'Final loss with momentum SGD: %f. We get : %f' % (loss_history1[-1],correct_loss)
+
+
 
 
 
