@@ -4,12 +4,12 @@
 
 import numpy as np
 # import matplotlib.pyplot as plt
-from nn.classifiers.neural_net import init_two_layer_model
-from nn.classifiers.neural_net import two_layer_net
-from nn.gradient_check import evaluate_numerical_grad
-from nn.classifier_trainer import ClassifierTrainer
+from NN.nn.classifiers.neural_net import init_two_layer_model
+from NN.nn.classifiers.neural_net import two_layer_net
+from NN.nn.gradient_check import evaluate_numerical_grad
+from NN.nn.classifier_trainer import ClassifierTrainer
 from svm.basic.datasets.data_util import load_CTFAR10
-from nn.visibale_utils import visualize_grid
+from NN.nn.visibale_utils import visualize_grid
 
 #  This is a multi-layer NN on the dataset of CIFAR-10
 
@@ -20,8 +20,8 @@ from nn.visibale_utils import visualize_grid
 # plt.rcParams['image.interpolation'] = 'nearest'
 # plt.rcParams['image.cmap'] = 'gray'
 
-#for auto-reloading external modules
-#see http://stackoverflow.com/questions/1907993/autoreload-of-modules-in-ipython
+#  for auto-reloading external modules
+#  see http://stackoverflow.com/questions/1907993/autoreload-of-modules-in-ipython
 
 
 def relative_error(x, y):
