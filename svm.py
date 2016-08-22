@@ -7,7 +7,7 @@ import time
 
 import matplotlib.pyplot as plt
 
-from NN.nn.datasets.data_util import load_CTFAR10
+from NN.nn.data_util import load_CTFAR10
 from svm.basic.check_gradient import *
 from svm.basic.classifiers.linear_classifier import LinearSVM
 from svm.basic.classifiers.linear_svm import *
