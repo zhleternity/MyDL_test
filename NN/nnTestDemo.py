@@ -168,7 +168,10 @@ best_model0, loss_history0, train_acc, val_acc = trainer0.train(x_train, y_train
                                                                 learning_rate_decay=1, num_epoches=5, verbose=False)
 #  monitor the training process
 #  First, we should ensure the training state is normal,so we can know the state by the means of below:
-#   1.
+#   1.plot the loss variation curve,we expect it is decreasing
+#   2.make the weights of the first layer visible
+#  plot the loss function and train / validation accuracies
+# plt.subplot(2, 1, 1)
 
 
 
