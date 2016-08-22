@@ -114,6 +114,54 @@ correct_loss = 0.494394
 print 'Final loss with momentum SGD: %f. We get : %f' % (loss_history1[-1],correct_loss)
 
 
+#  try the other method: RMSProp
+model2 = init_toy_model()
+trainer2 = ClassifierTrainer()
+best_model2, loss_history2, _, _ = trainer2.train(x, y, x, y,
+                                                  model2,two_layer_net,
+                                                  regularization=0.001,
+                                                  learning_rate=1e-1, momentum=0.9, learning_rate_decay=1,
+                                                  update='rmsprop', sample_batches=False,
+                                                  num_epoches=100, verbose=False)
+correct_loss2 = 0.439368
+print 'Final loss with RMSProp: %f. We get : %f' % (loss_history2[-1], correct_loss2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
