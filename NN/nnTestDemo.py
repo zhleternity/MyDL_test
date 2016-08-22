@@ -4,7 +4,8 @@
 
 import numpy as np
 
-from NN.nn.data_util import load_CTFAR10
+# from nn.data_util import load_CTFAR10
+from nn.data_util import load_CTFAR10
 from nn.classifier_trainer import ClassifierTrainer
 from nn.classifiers.neural_net import init_two_layer_model
 from nn.classifiers.neural_net import two_layer_net
