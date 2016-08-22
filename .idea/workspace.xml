@@ -49,11 +49,9 @@
       <file leaf-file-name="visibale_utils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NN/nn/visibale_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-              <folding>
-                <element signature="e#47#74#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-817">
+              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -181,8 +179,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1605" />
-    <option name="y" value="290" />
+    <option name="x" value="1634" />
+    <option name="y" value="147" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
   </component>
@@ -548,7 +546,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1605" y="290" width="1440" height="805" extended-state="0" />
+    <frame x="1634" y="147" width="1440" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1726568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1007,11 +1005,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NN/nn/visibale_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <element signature="e#47#74#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-817">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
