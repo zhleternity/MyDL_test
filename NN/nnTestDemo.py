@@ -219,7 +219,7 @@ print 'best validation accyracy achieved during cross-validation : %f' % best_va
 
 #  show the accuracy on the test set
 scores_test = two_layer_net(x_test, best_model3)
-print 'Test accuracy: ' % np.mean(np.argmax(scores_test,axis=1) == y_test)
+print 'Test accuracy: ' % np.mean(np.argmax(scores_test, axis=1) == y_test)
 
 
 
