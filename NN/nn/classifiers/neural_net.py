@@ -62,7 +62,8 @@ def two_layer_net(X, model, y=None, regularization=0.0, verbose=False):
     #  forward compute
     scores = None
     #  Relu activation layer
-    hidden_activation = np.maxmum(X.dot(W1) + b1, 0)
+    # hidden_activation = np.maxmum(X.dot(W1) + b1, 0)
+    hidden_activation = np.maximum(X.dot(W1) + b1, 0)
     if verbose:
         print "Layer result shape: " + str(scores.shape)
     #  if not give y, return the score
