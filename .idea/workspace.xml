@@ -113,8 +113,8 @@
       <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+            <state relative-caret-position="-484">
+              <caret line="173" column="76" selection-start-line="173" selection-start-column="76" selection-end-line="173" selection-end-column="76" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
               </folding>
@@ -168,8 +168,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1735" />
-    <option name="y" value="328" />
+    <option name="x" value="1846" />
+    <option name="y" value="473" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
   </component>
@@ -545,7 +545,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1735" y="328" width="1440" height="805" extended-state="0" />
+    <frame x="1846" y="473" width="1440" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1726568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1013,8 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+        <state relative-caret-position="-484">
+          <caret line="173" column="76" selection-start-line="173" selection-start-column="76" selection-end-line="173" selection-end-column="76" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
           </folding>

@@ -167,8 +167,11 @@ model0 = init_two_layer_model(32*32*3, 100, 10)  #  input_size, hidden size, num
 trainer0 = ClassifierTrainer()
 best_model0, loss_history0, train_acc, val_acc = trainer0.train(x_train, y_train, x_val, y_val,
                                                                 model0, two_layer_net,
-                                                                regularization=1.0, learning_rate=1e-2, momentum=0.9,
-                                                                learning_rate_decay=1, num_epoches=5, verbose=False)
+                                                                num_epoches=5,regularization=1.0,
+                                                                momentum=0.9,
+                                                                learning_rate_decay=0.95,
+                                                                learning_rate=1e-5,
+                                                                verbose=True)
 #  monitor the training process
 #  First, we should ensure the training state is normal,so we can know the state by the means of below:
 #   1.plot the loss variation curve,we expect it is decreasing
