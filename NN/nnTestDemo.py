@@ -87,7 +87,7 @@ loss, grads = two_layer_net(x, model, y, regularization)
 for param_name in grads:
     param_grad_num = evaluate_numerical_grad(lambda W: two_layer_net(x, model, y, regularization)[0],
                                              model[param_name], verbose=False)
-    print '%s maximum relative error: %e' % (relative_error(param_grad_num, grads[param_name]))
+    print '%s maximum relative error: %e' % (param_name, relative_error(param_grad_num, grads[param_name]))
 
 
 
