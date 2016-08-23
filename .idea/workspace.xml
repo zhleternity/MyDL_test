@@ -37,9 +37,11 @@
       <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="209">
+              <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+              <folding>
+                <element signature="e#39#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,8 +178,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1762" />
-    <option name="y" value="427" />
+    <option name="x" value="1553" />
+    <option name="y" value="415" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
   </component>
@@ -491,7 +493,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1762" y="427" width="1440" height="805" extended-state="0" />
+    <frame x="1553" y="415" width="1440" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1726568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -607,7 +609,7 @@
         <state relative-caret-position="950">
           <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
           <folding>
-            <element signature="e#15#33#0" expanded="true" />
+            <element signature="e#15#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -691,7 +693,7 @@
         <state relative-caret-position="1121">
           <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
           <folding>
-            <element signature="e#15#33#0" expanded="true" />
+            <element signature="e#15#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -775,7 +777,7 @@
         <state relative-caret-position="1121">
           <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
           <folding>
-            <element signature="e#15#33#0" expanded="true" />
+            <element signature="e#15#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -872,7 +874,7 @@
         <state relative-caret-position="950">
           <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
           <folding>
-            <element signature="e#15#33#0" expanded="true" />
+            <element signature="e#15#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -959,9 +961,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="209">
+          <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+          <folding>
+            <element signature="e#39#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

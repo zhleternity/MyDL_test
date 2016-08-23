@@ -30,7 +30,7 @@ def relative_error(x, y):
     return the relative error.
     """
     return np.max(np.abs(x - y) / (np.maximum(1e-8, np.abs(x) + np.abs(y))))
-#  randomly initialize the model(acturally is the wights) and dataset
+#  randomly initialize the model(acturally is the wights) and data set
 
 input_size = 4
 hidden_size = 10
@@ -42,7 +42,7 @@ def init_toy_model():
     model = {}
     model['W1'] = np.linspace(-0.2, 0.6, num=input_size * hidden_size).reshape(input_size, hidden_size)
     model['b1'] = np.linspace(-0.3, 0.7, num=hidden_size)
-    model['W2'] = np.linspace(-0.4, 0.1, num=hidden_size*num_inputs).reshape(hidden_size, num_classes)
+    model['W2'] = np.linspace(-0.4, 0.1, num=hidden_size * num_classes).reshape(hidden_size, num_classes)
     model['b2'] = np.linspace(-0.5, 0.9, num=num_classes)
     return model
 
