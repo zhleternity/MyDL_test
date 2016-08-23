@@ -95,7 +95,7 @@ for param_name in grads:
 #  train the NN
 #  we use fixed-step SGD and SGD with Momentum to minimum loss function
 #  fixed-step SGD
-model = init_toy_data()
+model = init_toy_model()
 trainer = ClassifierTrainer()
 #  Caution:here,the data is man-made,and small scale,so set 'sample_batched' to False;
 best_model, loss_history, _, _ = trainer.train(x, y, x, y,
