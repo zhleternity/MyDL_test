@@ -56,6 +56,7 @@ def two_layer_net(X, model, y=None, regularization=0.0, verbose=False):
     -- grads:the grads of the corresponding model params(that is the dict)
     """
     #  unpack variables from the model dict
+    print type(model)
     W1, b1, W2, b2 = model['W1'], model['b1'], model['W2'], model['b2']
     N, D = X.shape
 
