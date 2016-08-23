@@ -65,7 +65,11 @@ def two_layer_net(X, model, y=None, regularization=0.0, verbose=False):
     # hidden_activation = np.maxmum(X.dot(W1) + b1, 0)
     hidden_activation = np.maximum(X.dot(W1) + b1, 0)
     if verbose:
-        print "Layer result shape: " + str(scores.shape)
+        print "Layer 1 result shape: " + str(hidden_activation.shape)
+    #  softmax before scores
+    scores = hidden_activation.dot(W2) + b2
+    if verbose:
+        print 'Layer 2 result shape: ' + str(scores.shape)
     #  if not give y, return the score
     if y is None:
         return scores
