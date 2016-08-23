@@ -25,7 +25,7 @@ def init_two_layer_model(input_size, hidden_size, output_size):
     model = {}
     model['W1'] = np.random.randn(input_size, hidden_size) * np.sqrt(2.0 / (input_size * hidden_size))
     model['b1'] = np.zeros(hidden_size)
-    model['W2'] = np.random.randn(hidden_size,output_size) * np.sqrt(2.0 / (hidden_size * output_size))
+    model['W2'] = np.random.randn(hidden_size, output_size) * np.sqrt(2.0 / (hidden_size * output_size))
     model['b2'] = np.zeros(output_size)
     return model
 

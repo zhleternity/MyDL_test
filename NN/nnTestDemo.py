@@ -69,14 +69,14 @@ correct_scores = [[-0.5328368, 0.20031504, 0.93346689],
  [-0.89110401, -0.08754544, 0.71601312]]
 
 #  the diff between the computed score and the real score should be little
-print 'the diff between the computed score and the real score is :' % np.sum(np.abs(scores - correct_scores))
+print 'the diff between the computed score and the real score is : %e' % np.sum(np.abs(scores - correct_scores))
 
 #  forward compute: compute the loss(include the data loss and regularization)
 regularization = 0.1
 loss, _ = two_layer_net(x, model, y, regularization)
 correct_loss = 1.38191946092
 #  the diff also should be little
-print 'the diff between the computed loss and the correct loss is : ' % np.sum(np.abs(loss - correct_loss))
+print 'the diff between the computed loss and the correct loss is : %e' % np.sum(np.abs(loss - correct_loss))
 
 #  back-propagation
 #  To loss,we need compute the grads on W1,b1,W2,b2,it also needs do the grad-checkout
