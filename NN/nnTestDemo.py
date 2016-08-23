@@ -85,7 +85,7 @@ print 'the diff between the computed loss and the correct loss is : %e' % np.sum
 loss, grads = two_layer_net(x, model, y, regularization)
 #  it is save that each param should be less than 1e-8
 for param_name in grads:
-    param_grad_num = evaluate_numerical_grad(lambda W: two_layer_net(x, model, y, regularization)[0],
+    param_grad_num = evaluate_numerical_grad(lambda w: two_layer_net(x, model, y, regularization)[0],
                                              model[param_name], verbose=False)
     print '%s maximum relative error: %e' % (param_name, relative_error(param_grad_num, grads[param_name]))
 
@@ -99,7 +99,7 @@ model = init_toy_data()
 trainer = ClassifierTrainer()
 #  Caution:here,the data is man-made,and small scale,so set 'sample_batched' to False;
 best_model, loss_history, _, _ = trainer.train(x, y, x, y,
-                                               model, two_layer_net,regularization=0.001,
+                                               model, two_layer_net, regularization=0.001,
                                                learning_rate=1e-1, momentum=0.0,
                                                learning_rate_decay=1, update='sgd',
                                                sample_batches=False, num_epoches=100,

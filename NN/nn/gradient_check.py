@@ -2,7 +2,7 @@
 #  _*_ coding: utf-8 _*_
 #__author__ = 'eternity'
 
-import  numpy as np
+import numpy as np
 from random import randrange
 
 def evaluate_numerical_grad(f, x, verbose=True, h=0.00001):
@@ -28,7 +28,7 @@ def evaluate_numerical_grad(f, x, verbose=True, h=0.00001):
         fxsh = f(x)
         x[ix] = val_old  #  must restore
 
-        grad[ix] = (fxph - fxsh) / 2*h
+        grad[ix] = (fxph - fxsh) / (2*h)
         if verbose:
             print ix, grad[ix]
         it.iternext()  #  next
