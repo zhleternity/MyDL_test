@@ -136,7 +136,7 @@ print 'Final loss with RMSProp: %f. We get : %f' % (loss_history2[-1], correct_l
 #  ##########################################
 #load tha cifar10 data
 def get_CIFAR10_data(num_training=49000, num_validation=1000, num_test=1000):
-    cifar10_dir = 'svm/basic/datasets/cifar-10-batches-py'
+    cifar10_dir = 'nn/datasets/cifar-10-batches-py'
     x_train, y_train, x_test, y_test = load_CTFAR10(cifar10_dir)
     mask = range(num_training, num_training + num_validation)
     x_val = x_train[mask]
