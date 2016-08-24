@@ -4,6 +4,17 @@
 
 import numpy as np
 
+
+
+
+
+#  the main step as follow:
+#    1.forward computing:compute the score;
+#    2.forward computing: compute the loss and grad
+#    3.back-propagation
+#    4.train net
+#    5.fine-tune
+
 # from nn.data_util import load_CTFAR10
 from nn.data_util import load_CTFAR10
 from nn.classifier_trainer import ClassifierTrainer
