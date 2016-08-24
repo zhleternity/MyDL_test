@@ -9,8 +9,8 @@ import numpy as np
 
 
 #  the main step as follow:
-#    1.forward computing:compute the score;
-#    2.forward computing: compute the loss and grad
+#    1.forward computing:compute the score(if not give the labels);
+#    2.forward computing: compute the loss and grad(if give the labels)
 #    3.back-propagation
 #    4.train net
 #    5.fine-tune
