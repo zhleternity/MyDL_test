@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d196262c-9c1e-4876-a938-312be25c1c64" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NN/nn/classifier_trainer.py" afterPath="$PROJECT_DIR$/NN/nn/classifier_trainer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NN/nnTestDemo.py" afterPath="$PROJECT_DIR$/NN/nnTestDemo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NN/nn/classifiers/neural_net.py" afterPath="$PROJECT_DIR$/NN/nn/classifiers/neural_net.py" />
     </list>
     <ignored path="dltest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classifier_trainer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="classifier_trainer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NN/nn/classifier_trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
+            <state relative-caret-position="1406">
+              <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -79,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="neural_net.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="neural_net.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NN/nn/classifiers/neural_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
+            <state relative-caret-position="323">
+              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -114,7 +113,7 @@
       <file leaf-file-name="nnTestDemo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="3145">
               <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
@@ -162,15 +161,15 @@
         <option value="$PROJECT_DIR$/nnTestDemo.py" />
         <option value="$PROJECT_DIR$/svm.py" />
         <option value="$PROJECT_DIR$/NN/nn/gradient_check.py" />
-        <option value="$PROJECT_DIR$/NN/nn/classifiers/neural_net.py" />
         <option value="$PROJECT_DIR$/NN/nnTestDemo.py" />
         <option value="$PROJECT_DIR$/NN/nn/classifier_trainer.py" />
+        <option value="$PROJECT_DIR$/NN/nn/classifiers/neural_net.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1793" />
-    <option name="y" value="177" />
+    <option name="x" value="1738" />
+    <option name="y" value="19" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
   </component>
@@ -546,7 +545,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1793" y="177" width="1440" height="805" extended-state="0" />
+    <frame x="1738" y="19" width="1440" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1726568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -600,7 +599,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/NN/nn/classifiers/neural_net.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -996,17 +1002,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NN/nn/classifiers/neural_net.py">
+    <entry file="file://$PROJECT_DIR$/NN/nn/classifier_trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
+        <state relative-caret-position="1406">
+          <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NN/nnTestDemo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="3145">
           <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
@@ -1014,10 +1020,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NN/nn/classifier_trainer.py">
+    <entry file="file://$PROJECT_DIR$/NN/nn/classifiers/neural_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
+        <state relative-caret-position="323">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
           <folding />
         </state>
       </provider>

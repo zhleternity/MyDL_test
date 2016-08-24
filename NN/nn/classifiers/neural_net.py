@@ -58,17 +58,23 @@ def two_layer_net(X, model, y=None, regularization=0.0, verbose=False):
     #  unpack variables from the model dict
     # print type(model)
     W1, b1, W2, b2 = model['W1'], model['b1'], model['W2'], model['b2']
+    print 'W1 shape : ', W1.shape
+    print 'b1 shape : ', b1.shape
+    print 'W2 shape : ', W2.shape
+    print 'b2 shape : ', b2.shape
     N, D = X.shape
+    print 'N= %d, D = %d' % (N, D)
 
     #  forward compute
     scores = None
     #  Relu activation layer
-    # hidden_activation = np.maxmum(X.dot(W1) + b1, 0)
     hidden_activation = np.maximum(X.dot(W1) + b1, 0)
     if verbose:
         print "Layer 1 result shape: " + str(hidden_activation.shape)
     #  softmax before scores
     scores = hidden_activation.dot(W2) + b2
+    print 'scores shape: ', scores.shape
+    print 'scores data: ', scores
     if verbose:
         print 'Layer 2 result shape: ' + str(scores.shape)
     #  if not give y, return the score
