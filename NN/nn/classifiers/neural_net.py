@@ -84,6 +84,10 @@ def two_layer_net(X, model, y=None, regularization=0.0, verbose=False):
     loss = 0
     #  some computing tricks ,to ensure the stability of computing(need to subtract the maximum score)
     scores = scores - np.expand_dims(np.amax(scores, axis=1), axis=1)  #amax(): Return the maximum of an array or maximum along an axis.
+
+    print 'scores shape: ', scores.shape
+    print 'scores data: %f' % scores
+
     #  axis=1: along the second axis(row-wise)
     #  axis=0: along the first axis (column-wise) ;Caution:python same as matlab, they are both column-prior
     #  expand_dims(): Expand the shape of an array.
