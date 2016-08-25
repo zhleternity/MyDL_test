@@ -129,7 +129,7 @@ def plot_decision_boundary(pred_func):
 
     #  build a NN net with 3 nodes in hidden layer
     model = build_model(3, print_loss=True)
-    plot_decision_boundary(lambda x: predict(model, x))
+    plot_decision_boundary(lambda m: predict(model, x))
     plt.title("Dicision boundary for hidden layer size 3")
     plt.show()
 
@@ -140,7 +140,7 @@ def plot_decision_boundary(pred_func):
         plt.subplot(5, 2, i+1)
         plt.title("Hiden layer size %d" % nn_hidden_num)
         model = build_model(nn_hidden_num)
-        plot_decision_boundary(lambda x: predict(model, x))
+        plot_decision_boundary(lambda m: predict(model, x))
     plt.show()
 
 
