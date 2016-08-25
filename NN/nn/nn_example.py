@@ -17,7 +17,7 @@ x, y = make_moons(200, noise=0.20)
 # plt.scatter(x[:, 0], x[:, 1], s=40, c=y, cmap=plt.cm.Spectral)
 
 #  define a function as the decision boundary
-def decision_boundary(pred_func):
+def plot_decision_boundary(pred_func):
 
     #  set the max and min value , and fill the boundary
     x_min, x_max = x[:, 0].min() - 0.5, x[:, 0].max() + 0.5
@@ -125,6 +125,25 @@ def decision_boundary(pred_func):
         #  compute the class corresponding to max probability
         probs = exp_scores / np.sum(exp_scores, axis=1, keepdims=True)
         return np.argmax(probs, axis=1)  #  np.argmax(): Returns the indices of the maximum values along an axis.
+
+
+    #  build a NN net with 3 nodes in hidden layer
+    model = build_model(3, print_loss=True)
+    plot_decision_boundary(lambda x: predict(model, x))
+    plt.title("Dicision boundary for hidden layer size 3")
+    plt.show()
+
+    #  show the result under different hidden layer size
+    plt.figure(figsize=(16, 32))
+    hidden_layer_size = [1, 2, 3, 4, 5, 20, 50]
+    for i, nn_hidden_num in enumerate(hidden_layer_size):
+        plt.subplot(5, 2, i+1)
+        plt.title("Hiden layer size %d" % nn_hidden_num)
+        model = build_model(nn_hidden_num)
+        plot_decision_boundary(lambda x: predict(model, x))
+    plt.show()
+
+
 
 
 
